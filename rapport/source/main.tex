@@ -1,0 +1,92 @@
+\documentclass[a4paper,12pt]{report}
+
+\usepackage[french]{babel}%langue française
+\usepackage[utf8]{inputenc}%encodage des caractères
+\usepackage{tikz}
+%pour gérer les positionnement d'images
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[linesnumbered,ruled,french,one language]{algorithm2e}
+\makeatletter 
+\g@addto@macro{\@algocf@init}{\SetKwInput{KwOut}{Sortie}}
+\makeatother
+\usepackage{listings}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage{url}
+%pour les informations sur un document compilé en PDF et les liens externes / internes
+\usepackage[pdftex,hidelinks]{hyperref}
+%pour la mise en page des tableaux
+\usepackage{array}
+\usepackage{tabularx}
+%pour utiliser \floatbarrier
+
+%espacement entre les lignes
+\usepackage{setspace}
+%modifier la mise en page de l'abstract
+\usepackage{abstract}
+%police et mise en page (marges) du document
+\usepackage[T1]{fontenc}
+\usepackage[top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry}
+%Pour les galerie d'images
+\usepackage[most]{tcolorbox}
+
+
+%-------------------------Informations générale ----------------------------------------
+%\makeatletter
+%\renewcommand{\@chapapp}{}
+%\makeatother
+
+\begin{document}
+
+
+
+
+%régler l'espacement entre les lignes
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+\input{./title.tex}
+%\thispagestyle{empty}
+%\setcounter{page}{0}
+\newpage
+
+\tableofcontents
+\thispagestyle{empty}
+%\setcounter{page}{0}
+%ne pas numéroter le sommaire
+
+
+
+%espacement entre les lignes d'un tableau
+\renewcommand{\arraystretch}{1.5}
+
+%-----------------inclusion des pages----------------------
+%thispagestyle{empty}
+%recommencer la numérotation des pages à "1"
+%\setcounter{page}{0}
+%\newpage
+\input{./introduction.tex}
+\input{./chapitre1.tex}
+\input{./chapitre2.tex}
+\input{./chapitre3.tex}
+\input{./chapitre4.tex}
+\input{./chapitre5.tex}
+
+\begin{thebibliography}{1}
+		\bibitem{notes} Wikipedia L-Système (FR): {\em https://fr.wikipedia.org/wiki/L-Système} .
+		\bibitem{notes} Wikipedia L-Système (EN): {\em https://en.wikipedia.org/wiki/L-system} .
+		\bibitem{norman} E. H. Norman {\em https://www.techno-science.net/definition/11374.html} 		
+		\bibitem{fo} Bob Tadashi Wakabayashi {\em https://www.cs.unm.edu/~joel/PaperFoldingFractal/
+		L-system-rules.html}
+		\bibitem {notes} The algorithmic beauty of plants {\em http://algorithmicbotany.org/papers/abop/abop.pdf}
+		\bibitem {note} Moteur de rendu 3D {\em https://jogamp.org/jogl/www/}
+		\bibitem {note} JOGL Tutorial { \em https://www.javatpoint.com/jogl-tutorial}
+		\bibitem {note} Dessin java et java 2D {\em http://www-igm.univ-mlv.fr/~berstel/Cours/CoursJava/8-Dessin.pdf}
+		\bibitem {note} Java Platform Standard Edition 8 Documentation {\em https://docs.oracle.com/javase/8/docs/}
+		\bibitem {note} Stack overflow {\em https://stackoverflow.com/questions/18875244/java-build-ant-file-with-external-jar-files}
+		\bibitem {note} Houdini {\em https://www.sidefx.com/docs/houdini/nodes/sop/lsystem.html}
+		\bibitem {note} L-System Rules Parser {\em http://jeromeetienne.github.io/lsystem-js/parser-tool.html}
+		\bibitem {note} Vexlio {https://www.vexlio.com/blog/drawing-simple-organics-with-l-systems/}
+		
+\end{thebibliography}
+
+\end{document}
